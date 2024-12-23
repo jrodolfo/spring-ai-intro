@@ -63,6 +63,34 @@
 			"response": []
 		},
 		{
+			"name": "capital with BeanOutputConverter",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"stateOrCountry\": \"Brazil\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/capital",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"capital"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "capital with info",
 			"request": {
 				"method": "POST",
