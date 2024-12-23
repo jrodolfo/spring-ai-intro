@@ -1,5 +1,7 @@
 package guru.springframework.springaiintro.services;
 
+import guru.springframework.springaiintro.model.Answer;
+import guru.springframework.springaiintro.model.Question;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -16,9 +18,18 @@ class OpenAIServiceImplTest {
     @Autowired
     OpenAIServiceImpl openAIService;
 
+    final String prompt = "Tell me a dad joke.";
+
     @Test
-    void getAnswer() {
-        String answer = openAIService.getAnswer("What is the meaning of life?");
+    void getAnswerStr() {
+        String answer = openAIService.getAnswer(prompt);
+        assertNotNull(answer);
+        logger.log(Level.INFO, "Answer from OpenAI: " + answer);
+    }
+
+    @Test
+    void getAnswerObj() {
+        Answer answer = openAIService.getAnswer(new Question(prompt));
         assertNotNull(answer);
         logger.log(Level.INFO, "Answer from OpenAI: " + answer);
     }

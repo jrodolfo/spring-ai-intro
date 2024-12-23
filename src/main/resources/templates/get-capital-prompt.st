@@ -1,0 +1,1 @@
+What is the capital of {stateOrCountry}? Response in a JSON format with the name of the capital in a property named `answer`. Do not write json in the response, just give me the json content.

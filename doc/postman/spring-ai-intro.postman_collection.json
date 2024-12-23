@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "0c984107-89fe-44eb-a239-860202296df9",
+		"name": "spring-ai-intro",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5262710"
+	},
+	"item": [
+		{
+			"name": "ask",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"question\": \"Tell me a dad joke.\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/ask",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "capital",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"stateOrCountry\": \"Brazil\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/capital",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"capital"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "capital with info",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"stateOrCountry\": \"France\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/capitalWithInfo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"capitalWithInfo"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
